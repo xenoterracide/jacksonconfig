@@ -18,4 +18,10 @@ public class MyEntity implements Persistable<Long> {
     public boolean isNew() {
         return id != null;
     }
+
+    /* uncomment and use hot reload
+    public void setId( final Long id ) {
+        this.id = id;
+    }
+    */
 }
