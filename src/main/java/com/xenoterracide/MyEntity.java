@@ -9,9 +9,15 @@ public class MyEntity implements Persistable<Long> {
     @GraphId
     private Long id;
 
+    private String name;
+
     @Override
     public Long getId() {
         return id;
+    }
+
+    public void setId( final Long id ) {
+        this.id = id;
     }
 
     @Override
@@ -19,9 +25,11 @@ public class MyEntity implements Persistable<Long> {
         return id != null;
     }
 
-    /* uncomment and use hot reload
-    public void setId( final Long id ) {
-        this.id = id;
+    public String getName() {
+        return name;
     }
-    */
+
+    public void setName( final String name ) {
+        this.name = name;
+    }
 }
